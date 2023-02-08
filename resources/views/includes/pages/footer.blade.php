@@ -4,7 +4,7 @@
     </a>
     <p class="fs-6 mb-1">CV. Alto Perkasa</p>
     <p class="fs-6">&copy; 2023 </p>
-    <ul class="list-inline mb-0">
+    {{-- <ul class="list-inline mb-0">
         <li class="list-inline-item">
             <a class="btn btn-ghost-secondary btn-sm btn-icon rounded-circle" href="#">
                 <i class="bi-facebook"></i>
@@ -30,5 +30,5 @@
                 <i class="bi-instagram"></i>
             </a>
         </li>
-    </ul>
+    </ul> --}}
 </footer>
