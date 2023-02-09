@@ -290,4 +290,7 @@ Home
         </div>
     </div>
 </div>
+
+@include('includes.pages.footer')
+
 @endsection

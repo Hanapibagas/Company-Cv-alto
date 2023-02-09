@@ -22,7 +22,7 @@
 
     </main>
 
-    @include('includes.pages.footer')
+    {{-- @include('includes.pages.footer') --}}
 
     @include('includes.pages.script')
 </body>
