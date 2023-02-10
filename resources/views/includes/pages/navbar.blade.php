@@ -34,7 +34,7 @@
                             <a class="hs-mega-menu-invoker nav-link" href="{{ route('career_home') }}">Career</a>
                         </li>
                         <li class="nav-item">
-                            <a class="hs-mega-menu-invoker nav-link" href="#">Events</a>
+                            <a class="hs-mega-menu-invoker nav-link" href="{{ route('events_home') }}">Events</a>
                         </li>
                         <li class="hs-has-sub-menu nav-item">
                             <a id="accountMegaMenu" class="hs-mega-menu-invoker nav-link dropdown-toggle " href="#"

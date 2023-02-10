@@ -16,7 +16,13 @@
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
 
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css"
+        integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
+
     <link href="{{ asset('pages/backend/css/sb-admin-2.min.css') }}" rel="stylesheet">
+
+    @stack('add-style')
 
 </head>
 
@@ -50,6 +56,8 @@
     </a>
 
     @include('includes.admin.script')
+
+    @stack('add-script')
 
 </body>
 

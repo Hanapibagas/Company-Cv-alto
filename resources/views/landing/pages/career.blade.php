@@ -5,40 +5,24 @@ Career
 @endsection
 
 @section('content')
-<div class="container content-space-t-3 content-space-t-lg-5" style="margin-top: -100px">
+<div class="container content-space-t-3 content-space-t-lg-5">
     <div class="w-lg-75 text-center mx-lg-auto">
         <div class="mb-5 mb-md-10">
-            <h1 class="display-4" style="margin-bottom: -110px">Career</h1>
+            <h1 class="display-4">Career</h1>
         </div>
     </div>
 </div>
 
 <div class="container content-space-2 content-space-b-lg-3">
     <div class="row">
+        @foreach ( $banner as $files )
         <div class="order-lg-0 col-sm-6 col-lg-4 mb-3 mb-sm-7">
             <a class="card card-stretched-vertical card-transition bg-img-start gradient-y-overlay-sm-gray-900"
                 min-height: 25rem;">
-                <img src="{{ asset('pages/frontend/img/career/c1.jpeg') }}" alt="" srcset="">
+                <img src="{{ asset('storage/'.$files->banner) }}" alt="" srcset="">
             </a>
         </div>
-        <div class="order-lg-0 col-sm-6 col-lg-4 mb-3 mb-sm-7">
-            <a class="card card-stretched-vertical card-transition bg-img-start gradient-y-overlay-sm-gray-900"
-                min-height: 25rem;">
-                <img src="{{ asset('pages/frontend/img/career/career.png') }}" alt="" srcset="">
-            </a>
-        </div>
-        <div class="order-lg-0 col-sm-6 col-lg-4 mb-3 mb-sm-7">
-            <a class="card card-stretched-vertical card-transition bg-img-start gradient-y-overlay-sm-gray-900"
-                min-height: 25rem;">
-                <img src="{{ asset('pages/frontend/img/career/c2.jpeg') }}" alt="" srcset="">
-            </a>
-        </div>
-        <div class="order-lg-0 col-sm-6 col-lg-4 mb-3 mb-sm-7">
-            <a class="card card-stretched-vertical card-transition bg-img-start gradient-y-overlay-sm-gray-900"
-                min-height: 25rem;">
-                <img src="{{ asset('pages/frontend/img/career/jobbeleng.jpeg') }}" alt="" srcset="">
-            </a>
-        </div>
+        @endforeach
     </div>
 
     <div class="text-center">

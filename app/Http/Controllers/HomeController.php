@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Career;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,12 +24,18 @@ class HomeController extends Controller
 
     public function career()
     {
-        return view('landing.pages.career');
+        $banner = Career::all();
+        return view('landing.pages.career', compact('banner'));
     }
 
     public function events()
     {
         return view('landing.pages.events');
+    }
+
+    public function events_details($slug)
+    {
+        return view('landing.pages.details-events');
     }
 
     public function portofolio()
@@ -41,14 +48,29 @@ class HomeController extends Controller
         return view('landing.pages.produk-software');
     }
 
+    public function software_details($slug)
+    {
+        return view('landing.pages.details-software');
+    }
+
     public function hardware()
     {
         return view('landing.pages.protofolio-hardware');
     }
 
+    public function hardware_details($slug)
+    {
+        return view('landing.pages.details-hardware');
+    }
+
     public function networking()
     {
         return view('landing.pages.produk-networking');
+    }
+
+    public function networking_details($slug)
+    {
+        return view('landing.pages.details-networking');
     }
 
     public function photos()

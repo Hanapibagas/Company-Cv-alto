@@ -9,9 +9,17 @@
     <hr class="sidebar-divider my-0">
 
     <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="{{ route('dashboard_index') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
+    </li>
+
+    <hr class="sidebar-divider d-none d-md-block">
+
+    <li class="nav-item active">
+        <a class="nav-link" href="{{ route('index_career') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Career</span></a>
     </li>
 
     <hr class="sidebar-divider d-none d-md-block">
