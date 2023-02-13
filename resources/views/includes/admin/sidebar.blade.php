@@ -24,6 +24,30 @@
 
     <hr class="sidebar-divider d-none d-md-block">
 
+    <li class="nav-item active">
+        <a class="nav-link" href="{{ route('index_events') }}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Events</span></a>
+    </li>
+
+    <hr class="sidebar-divider d-none d-md-block">
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+            aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Produk</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="{{ route('index_portofolio') }}">Produk portofolio</a>
+                <a class="collapse-item" href="{{ route('index_software') }}">Produk software</a>
+                <a class="collapse-item" href="{{ route('index_hardware') }}">Produk hardware</a>
+                <a class="collapse-item" href="{{ route('index_networking') }}">Produk networking</a>
+            </div>
+        </div>
+    </li>
+
     <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
     </div>

@@ -22,14 +22,14 @@ Create Career
 
     <div class="card shadow">
         <div class="card-body">
-            <form action="" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('update_career', $banner->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 <div class="form-group">
                     <label for="floatingInput">Sampul</label><br>
                     <small>Pilih gambar jika ingin mengubah</small>
                     <input value="{{$banner->banner}}" type="file" class="form-control-file" id="floatingInput"
-                        placeholder="Cover" name="cover">
+                        placeholder="Cover" name="banner">
                     @if ($banner->banner )
                     <img class="mt-3" width="100px" height="100px" src="{{ asset ('storage/'.$banner->banner) }}"
                         alt="fesfh">

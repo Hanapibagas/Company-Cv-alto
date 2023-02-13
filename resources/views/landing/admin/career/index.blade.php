@@ -38,7 +38,7 @@ Career
                                 <a href="{{ route('edit_career', $files->id) }}" class="btn btn-info">
                                     <i class="fa fa-pencil-alt"></i>
                                 </a>
-                                <form action="" method="POST" class="d-inline">
+                                <form action="{{ route('delete_career', $files->id) }}" method="POST" class="d-inline">
                                     @csrf
                                     @method('DELETE')
                                     <button class="btn btn-danger">
