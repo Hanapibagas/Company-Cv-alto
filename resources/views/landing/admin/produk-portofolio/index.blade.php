@@ -37,10 +37,10 @@ Portofolio
                                     class="img-thumbnail">
                             </th>
                             <th>
-                                <a href="{{ route('update_portofolio', $files->id) }}" class="btn btn-info">
+                                <a href="{{ route('edit_portofolio', $files->id) }}" class="btn btn-info">
                                     <i class="fa fa-pencil-alt"></i>
                                 </a>
-                                <form action="{{ route('update_portofolio', $files->id) }}" method="POST"
+                                <form action="{{ route('delete_portofolio', $files->id) }}" method="POST"
                                     class="d-inline">
                                     @csrf
                                     @method('DELETE')

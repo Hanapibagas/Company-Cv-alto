@@ -54,14 +54,31 @@ Route::prefix('dashboard')->middleware(['auth', 'admin'])->group(function () {
     Route::get('/portofolio/index/', [ProdukAdminController::class, 'produk_portofolio_index'])->name('index_portofolio');
     Route::get('/portofolio/craete/', [ProdukAdminController::class, 'produk_portofolio_create'])->name('create_portofolio');
     Route::post('/portofolio/post/', [ProdukAdminController::class, 'produk_portofolio_store'])->name('store_portofolio');
-    Route::get('/portofolio/post/{id}', [ProdukAdminController::class, 'produk_portofolio_edit'])->name('update_portofolio');
+    Route::get('/portofolio/post/{id}', [ProdukAdminController::class, 'produk_portofolio_edit'])->name('edit_portofolio');
+    Route::put('/portofolio/post/{id}', [ProdukAdminController::class, 'produk_portofolio_update'])->name('update_portofolio');
+    Route::delete('/portofolio/delete/{id}', [ProdukAdminController::class, 'produk_portofolio_destroy'])->name('delete_portofolio');
 
     // produk software
     Route::get('/software/index/', [ProdukAdminController::class, 'produk_software_index'])->name('index_software');
+    Route::get('/software/craete/', [ProdukAdminController::class, 'produk_software_create'])->name('create_software');
+    Route::post('/software/post/', [ProdukAdminController::class, 'produk_software_store'])->name('store_software');
+    Route::get('/software/post/{id}', [ProdukAdminController::class, 'produk_software_edit'])->name('edit_software');
+    Route::put('/software/post/{id}', [ProdukAdminController::class, 'produk_software_update'])->name('update_software');
+    Route::delete('/software/delete/{id}', [ProdukAdminController::class, 'produk_software_destroy'])->name('delete_software');
 
     //produk hardware
     Route::get('/hardware/index/', [ProdukAdminController::class, 'produk_hardware_index'])->name('index_hardware');
+    Route::get('/hardware/craete/', [ProdukAdminController::class, 'produk_hardware_create'])->name('create_hardware');
+    Route::post('/hardware/post/', [ProdukAdminController::class, 'produk_hardware_store'])->name('store_hardware');
+    Route::get('/hardware/post/{id}', [ProdukAdminController::class, 'produk_hardware_edit'])->name('edit_hardware');
+    Route::put('/hardware/post/{id}', [ProdukAdminController::class, 'produk_hardware_update'])->name('update_hardware');
+    Route::delete('/hardware/delete/{id}', [ProdukAdminController::class, 'produk_hardware_destroy'])->name('delete_hardware');
 
     // produk networking
     Route::get('/networking/index/', [ProdukAdminController::class, 'produk_networking_index'])->name('index_networking');
+    Route::get('/networking/craete/', [ProdukAdminController::class, 'produk_networking_create'])->name('create_networking');
+    Route::post('/networking/post/', [ProdukAdminController::class, 'produk_networking_store'])->name('store_networking');
+    Route::get('/networking/post/{id}', [ProdukAdminController::class, 'produk_networking_edit'])->name('edit_networking');
+    Route::put('/networking/post/{id}', [ProdukAdminController::class, 'produk_networking_update'])->name('update_networking');
+    Route::delete('/networking/delete/{id}', [ProdukAdminController::class, 'produk_networking_destroy'])->name('delete_networking');
 });

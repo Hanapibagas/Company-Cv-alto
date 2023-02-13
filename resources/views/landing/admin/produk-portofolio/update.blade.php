@@ -23,7 +23,7 @@ Portofolio
 
     <div class="card shadow">
         <div class="card-body">
-            <form action="{{ route('store_portofolio') }}" method="post" enctype="multipart/form-data">
+            <form action="{{ route('update_portofolio', $edit->id) }}" method="post" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 <div class="form-group">
