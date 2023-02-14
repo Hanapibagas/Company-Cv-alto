@@ -15,14 +15,20 @@ Career
 
 <div class="container content-space-2 content-space-b-lg-3">
     <div class="row">
-        @foreach ( $banner as $files )
+        @forelse ( $banner as $files )
         <div class="order-lg-0 col-sm-6 col-lg-4 mb-3 mb-sm-7">
             <a class="card card-stretched-vertical card-transition bg-img-start gradient-y-overlay-sm-gray-900"
                 min-height: 25rem;">
                 <img src="{{ asset('storage/'.$files->banner) }}" alt="" srcset="">
             </a>
         </div>
-        @endforeach
+        @empty
+        <div style="text-align: center; margin-bottom: 20%">
+            <h1>
+                Mohon maaf Career saat ini tidak ada.
+            </h1>
+        </div>
+        @endforelse
     </div>
 
     <div class="text-center">

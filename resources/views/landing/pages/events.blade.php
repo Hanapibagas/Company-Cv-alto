@@ -17,33 +17,32 @@ Events
     <div class="row justify-content-lg-between">
         <div class="col-lg-8 mb-10 mb-lg-0">
             <div class="d-grid gap-7 mb-7">
-                <div class="card card-flush card-stretched-vertical">
+                @forelse ( $events as $event )
+                <div class="card card-flush card-stretched">
                     <div class="row">
                         <div class="col-sm-5">
-                            <img class="card-img" src="{{ asset('pages/frontend/img/events/1628254834.jpeg') }}"
-                                alt="Image Description">
+                            <img class="card-img" src="{{ asset('storage/'.$event->image) }}" alt="Image Description">
                         </div>
                         <div class="col-sm-7">
                             <div class="card-body">
                                 <div class="mb-2">
-                                    <a class="card-link" href="">Community</a>
+                                    <a class="card-link"
+                                        href="{{ route('events_details_home', $event->slug) }}">Community</a>
                                 </div>
                                 <h3 class="card-title">
-                                    <a class="text-dark" href="">
-                                        Ingin sukses jadi programmer ?
+                                    <a class="text-dark" href="{{ route('events_details_home', $event->slug) }}">
+                                        {{ $event->title }}
                                     </a>
                                 </h3>
-                                <p class="card-text">
-                                    <a class="text-dark" href="">
-                                        Liny Jaya Berbagi Ilmu Dengan Mengadakan Pelatihan Kilat Pembuatan Web Khusus
-                                        Untuk
-                                        Tingkat Pemula Yang Ingin Sukses Jadi Web Developer
-                                    </a>
-                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
+                @empty
+                <div style="text-align: center; margin-left: 50%">
+                    <h2>Mohon maaf Event saat ini tidak ada.</h2>
+                </div>
+                @endforelse
             </div>
         </div>
     </div>

@@ -53,7 +53,7 @@
                             <div class="hs-sub-menu dropdown-menu" aria-labelledby="pagesMegaMenu"
                                 style="min-width: 14rem;">
                                 <a class="dropdown-item " href="{{ route('photos_home') }}">Photos</a>
-                                <a class="dropdown-item " href="{{ route('video_home') }}">Video</a>
+                                {{-- <a class="dropdown-item " href="{{ route('video_home') }}">Video</a> --}}
                             </div>
                         </li>
                     </ul>

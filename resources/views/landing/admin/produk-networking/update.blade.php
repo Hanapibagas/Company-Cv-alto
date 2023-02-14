@@ -8,7 +8,7 @@ Produk Software
 @section('content')
 <div class="container-fluid">
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Tambah software</h1>
+        <h1 class="h3 mb-0 text-gray-800">Tambah networking</h1>
     </div>
 
     @if ( $errors->any() )
@@ -23,7 +23,7 @@ Produk Software
 
     <div class="card shadow">
         <div class="card-body">
-            <form action="{{ route('update_software', $edit->id) }}" method="post" enctype="multipart/form-data">
+            <form action="{{ route('update_networking', $edit->id) }}" method="post" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 <div class="form-group">

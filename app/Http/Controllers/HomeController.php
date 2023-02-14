@@ -3,6 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Career;
+use App\Models\Event;
+use App\Models\Hardware;
+use App\Models\Networking;
+use App\Models\Photos;
+use App\Models\Portofolio;
+use App\Models\Software;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -30,52 +36,62 @@ class HomeController extends Controller
 
     public function events()
     {
-        return view('landing.pages.events');
+        $events = Event::all();
+        return view('landing.pages.events', compact('events'));
     }
 
     public function events_details($slug)
     {
-        return view('landing.pages.details-events');
+        $events = Event::where('slug', $slug)->firstOrFail();
+        return view('landing.pages.details-events', compact('events'));
     }
 
     public function portofolio()
     {
-        return view('landing.pages.produk-portofolio');
+        $portofolios = Portofolio::all();
+        return view('landing.pages.produk-portofolio', compact('portofolios'));
     }
 
     public function software()
     {
-        return view('landing.pages.produk-software');
+        $softwares = Software::all();
+        return view('landing.pages.produk-software', compact('softwares'));
     }
 
     public function software_details($slug)
     {
-        return view('landing.pages.details-software');
+        $softwares = Software::where('slug', $slug)->firstOrFail();
+        return view('landing.pages.details-software', compact('softwares'));
     }
 
     public function hardware()
     {
-        return view('landing.pages.protofolio-hardware');
+        $hardwares = Hardware::all();
+        return view('landing.pages.protofolio-hardware', compact('hardwares'));
     }
 
     public function hardware_details($slug)
     {
-        return view('landing.pages.details-hardware');
+        $hardwares = Hardware::where('slug', $slug)->firstOrFail();
+        return view('landing.pages.details-hardware', compact('hardwares'));
     }
 
     public function networking()
     {
-        return view('landing.pages.produk-networking');
+        $networkings = Networking::all();
+        return view('landing.pages.produk-networking', compact('networkings'));
     }
 
     public function networking_details($slug)
     {
-        return view('landing.pages.details-networking');
+        $networkings = Networking::where('slug', $slug)->firstOrFail();
+        return view('landing.pages.details-networking', compact('networkings'));
     }
 
     public function photos()
     {
-        return view('landing.pages.galleri-photos');
+        $photos = Photos::all();
+        return view('landing.pages.galleri-photos', compact('photos'));
     }
 
     public function video()

@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\CareerController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\EventsController;
+use App\Http\Controllers\Admin\GalleryPhotosController;
 use App\Http\Controllers\Admin\ProdukAdminController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
@@ -81,4 +82,12 @@ Route::prefix('dashboard')->middleware(['auth', 'admin'])->group(function () {
     Route::get('/networking/post/{id}', [ProdukAdminController::class, 'produk_networking_edit'])->name('edit_networking');
     Route::put('/networking/post/{id}', [ProdukAdminController::class, 'produk_networking_update'])->name('update_networking');
     Route::delete('/networking/delete/{id}', [ProdukAdminController::class, 'produk_networking_destroy'])->name('delete_networking');
+
+    // gallery photo
+    Route::get('/photos/index/', [GalleryPhotosController::class, 'gallery_photos_index'])->name('index_photos');
+    Route::get('/photos/craete/', [GalleryPhotosController::class, 'gallery_photos_create'])->name('create_photos');
+    Route::post('/photos/post/', [GalleryPhotosController::class, 'gallery_photos_store'])->name('store_photos');
+    Route::get('/photos/post/{id}', [GalleryPhotosController::class, 'gallery_photos_edit'])->name('edit_photos');
+    Route::put('/photos/post/{id}', [GalleryPhotosController::class, 'gallery_photos_update'])->name('update_photos');
+    Route::delete('/photos/delete/{id}', [GalleryPhotosController::class, 'gallery_photos_destroy'])->name('delete_photos');
 });

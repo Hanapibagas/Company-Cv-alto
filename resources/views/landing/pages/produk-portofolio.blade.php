@@ -32,137 +32,23 @@ Produk Portofolio
 
 <div class="container content-space-b-2 content-space-b-lg-3">
     <div class="js-shuffle row row-cols-1 row-cols-sm-2 row-cols-md-3">
+        @forelse ( $portofolios as $portofolio )
         <div class="js-shuffle-item col mb-5" data-groups='["product"]'>
             <a class="card card-flush card-transition">
-                <img class="card-img-top" src="{{ asset('pages/frontend/img/portofolio/1628253516.jpg') }}"
-                    alt="Image Description">
+                <img class="card-img-top" src="{{ asset('storage/'.$portofolio->image) }}" alt="Image Description">
                 <div class="card-body">
                     <span class="card-subtitle text-body">Product</span>
-                    <h3 class="card-title">Sistem Penerimaan Peserta Didik Baru (PPDB) Online</h3>
+                    <h3 class="card-title">{{ $portofolio->title }}</h3>
                 </div>
             </a>
         </div>
-
-        <div class="js-shuffle-item col mb-5" data-groups='["branding"]'>
-            <a class="card card-flush card-transition">
-                <img class="card-img-top" src="{{ asset('pages/frontend/img/portofolio/1628253575.jpg') }}"
-                    alt="Image Description">
-                <div class="card-body">
-                    <span class="card-subtitle text-body">Product</span>
-                    <h3 class="card-title">Mamika Tanggap Convid 19</h3>
-                </div>
-            </a>
+        @empty
+        <div style="text-align: center; margin-left: 33%">
+            <h1>
+                Mohon maaf portofolio saat ini tidak ada.
+            </h1>
         </div>
-
-        <div class="js-shuffle-item col mb-5" data-groups='["branding"]'>
-            <a class="card card-flush card-transition">
-                <img class="card-img-top" src="{{ asset('pages/frontend/img/portofolio/1628253715.jpg') }}"
-                    alt="Image Description">
-                <div class="card-body">
-                    <span class="card-subtitle text-body">product</span>
-                    <h3 class="card-title">Smart Absen Mobile V 1.1 LJ</h3>
-                </div>
-            </a>
-        </div>
-
-        <div class="js-shuffle-item col mb-5" data-groups='["product"]'>
-            <a class="card card-flush card-transition">
-                <img class="card-img-top" src="{{ asset('pages/frontend/img/portofolio/1628253764.jpg') }}"
-                    alt="Image Description">
-                <div class="card-body">
-                    <span class="card-subtitle text-body">Product</span>
-                    <h3 class="card-title">Sisfo Kesehatan Ibu Dan Anak Dinas Kesehatan</h3>
-                </div>
-            </a>
-        </div>
-
-        <div class="js-shuffle-item col mb-5" data-groups='["illustration"]'>
-            <a class="card card-flush card-transition">
-                <img class="card-img-top" src="{{ asset('pages/frontend/img/portofolio/1628253817.jpg') }}"
-                    alt="Image Description">
-                <div class="card-body">
-                    <span class="card-subtitle text-body">Product</span>
-                    <h3 class="card-title">Sisfo Akreditasi Dinas Kesehatan</h3>
-                </div>
-            </a>
-        </div>
-
-        <div class="js-shuffle-item col mb-5" data-groups='["branding"]'>
-            <a class="card card-flush card-transition">
-                <img class="card-img-top" src="{{ asset('pages/frontend/img/portofolio/1628253872.jpg') }}"
-                    alt="Image Description">
-                <div class="card-body">
-                    <span class="card-subtitle text-body">product</span>
-                    <h3 class="card-title">SIM - TLHP</h3>
-                </div>
-            </a>
-        </div>
-
-        <div class="js-shuffle-item col mb-5" data-groups='["branding"]'>
-            <a class="card card-flush card-transition">
-                <img class="card-img-top" src="{{ asset('pages/frontend/img/portofolio/1628254031.jpeg') }}"
-                    alt="Image Description">
-                <div class="card-body">
-                    <span class="card-subtitle text-body">product</span>
-                    <h3 class="card-title">Smart Office Prov SulSel V LJ</h3>
-                </div>
-            </a>
-        </div>
-
-        <div class="js-shuffle-item col mb-5" data-groups='["design"]'>
-            <a class="card card-flush card-transition">
-                <img class="card-img-top" src="{{ asset('pages/frontend/img/portofolio/1628254106.jpeg') }}"
-                    alt="Image Description">
-                <div class="card-body">
-                    <span class="card-subtitle text-body">product</span>
-                    <h3 class="card-title">sistem E-Kinerja Kab Wakatobi</h3>
-                </div>
-            </a>
-        </div>
-
-        <div class="js-shuffle-item col mb-5" data-groups='["design"]'>
-            <a class="card card-flush card-transition">
-                <img class="card-img-top" src="{{ asset('pages/frontend/img/portofolio/1628254166.jpg') }}"
-                    alt="Image Description">
-                <div class="card-body">
-                    <span class="card-subtitle text-body">product</span>
-                    <h3 class="card-title">Sistem Informasi Konvensi Pendeta</h3>
-                </div>
-            </a>
-        </div>
-
-        <div class="js-shuffle-item col mb-5" data-groups='["design"]'>
-            <a class="card card-flush card-transition">
-                <img class="card-img-top" src="{{ asset('pages/frontend/img/portofolio/1628254214.jpeg') }}"
-                    alt="Image Description">
-                <div class="card-body">
-                    <span class="card-subtitle text-body">product</span>
-                    <h3 class="card-title">Sistem Arsip Dinas Perpustakaan Dan Kearsipan</h3>
-                </div>
-            </a>
-        </div>
-
-        <div class="js-shuffle-item col mb-5" data-groups='["design"]'>
-            <a class="card card-flush card-transition">
-                <img class="card-img-top" src="{{ asset('pages/frontend/img/portofolio/1628254272.jpeg') }}"
-                    alt="Image Description">
-                <div class="card-body">
-                    <span class="card-subtitle text-body">product</span>
-                    <h3 class="card-title">Sistem E-Absensi Toraja Utara</h3>
-                </div>
-            </a>
-        </div>
-
-        <div class="js-shuffle-item col mb-5" data-groups='["design"]'>
-            <a class="card card-flush card-transition">
-                <img class="card-img-top" src="{{ asset('pages/frontend/img/portofolio/1628254321.jpeg') }}"
-                    alt="Image Description">
-                <div class="card-body">
-                    <span class="card-subtitle text-body">product</span>
-                    <h3 class="card-title">Web Mimika</h3>
-                </div>
-            </a>
-        </div>
+        @endforelse
     </div>
 </div>
 
