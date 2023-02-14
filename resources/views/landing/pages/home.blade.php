@@ -21,11 +21,17 @@ Home
             <br>
             full stack web agency
         </h1>
-        <p class="lead">Selamat datang disitus Alto Perkasa. Kami adalah sebuah perusahaan swasta yang
+        <p class="lead">
+            Selamat datang disitus Alto Perkasa. Kami adalah sebuah perusahaan swasta yang
             khusus
             bergerak dalam pengadaan produk dan jasa IT di Indonesia. Kami selalu siap melayani dan memberikan solusi
             terbaik untuk penerapan berbagai produk IT yang anda butuhkan. Jangan ragu menghubungi kami pada kontak yang
-            tersedia apabila anda ingin mendapatkan solusi terbaik atas kebutuhan IT anda.</p>
+            tersedia apabila anda ingin mendapatkan solusi terbaik atas kebutuhan IT anda.
+        </p>
+        <div class="d-grid">
+            <a class="btn btn-block btn-lg btn-success" href="https://wa.me/6282192272289" target="blank"><i
+                    class="bi-whatsapp" style="margin-right: 10px"></i>Layanan CS</a>
+        </div>
     </div>
 </div>
 
@@ -94,7 +100,8 @@ Home
 <div class="container content-space-2 content-space-lg-3">
     <div class="w-md-65 mb-5 mb-md-9">
         <span class="text-cap">Portofolio</span>
-        <h2 class="lh-base">Kami membantu bisnis mewujudkan ide di dunia digital, dengan merancang dan menerapkan alat
+        <h2 class="lh-base">Kami membantu bisnis mewujudkan ide di dunia digital, dengan merancang dan menerapkan
+            alat
             teknologi yang mereka butuhkan untuk menang.</h2>
     </div>
     <div class="overflow-hidden">

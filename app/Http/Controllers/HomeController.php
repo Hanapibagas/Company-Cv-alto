@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use App\Models\Career;
 use App\Models\Event;
 use App\Models\Hardware;
@@ -97,5 +98,17 @@ class HomeController extends Controller
     public function video()
     {
         return view('landing.pages.gallerry-video');
+    }
+
+    public function blog()
+    {
+        $blogs = Blog::all();
+        return view('landing.pages.blog', compact('blogs'));
+    }
+
+    public function detail_blog($slug)
+    {
+        $blogs = Blog::where('slug', $slug)->firstOrFail();
+        return view('landing.pages.details-blog', compact('blogs'));
     }
 }

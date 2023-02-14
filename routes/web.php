@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\BlogAdminController;
 use App\Http\Controllers\Admin\CareerController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\EventsController;
@@ -21,6 +22,9 @@ Route::get('/video', [HomeController::class, 'video'])->name('video_home');
 Route::get('/events', [HomeController::class, 'events'])->name('events_home');
 Route::get('/events/{slug}', [HomeController::class, 'events_details'])->name('events_details_home');
 
+Route::get('/blog', [HomeController::class, 'blog'])->name('blog_home');
+Route::get('/blog/{slug}', [HomeController::class, 'detail_blog'])->name('blog_details_home');
+
 Route::get('/software', [HomeController::class, 'software'])->name('software_home');
 Route::get('/software/{slug}', [HomeController::class, 'software_details'])->name('software_details_home');
 
@@ -34,6 +38,15 @@ Auth::routes();
 
 Route::prefix('dashboard')->middleware(['auth', 'admin'])->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard_index');
+
+    // blog
+    Route::get('/blog/index/', [BlogAdminController::class, 'index'])->name('index_blog');
+    Route::get('/blog/create/', [BlogAdminController::class, 'create'])->name('create_blog');
+    Route::post('blog/post/', [BlogAdminController::class, 'store'])->name('store_blog');
+    Route::get('/blog/update/{id}', [BlogAdminController::class, 'edit'])->name('edit_blog');
+    Route::put('/blog/post/{id}', [BlogAdminController::class, 'update'])->name('update_blog');
+    Route::delete('/blog/delete/{id}', [BlogAdminController::class, 'destroy'])->name('delete_blog');
+
 
     // career
     Route::get('/career/index/', [CareerController::class, 'index'])->name('index_career');

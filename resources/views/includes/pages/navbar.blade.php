@@ -28,7 +28,7 @@
                             <a class="hs-mega-menu-invoker nav-link" href="{{ route('about_home') }}">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="hs-mega-menu-invoker nav-link" href="{{ route('investor_home') }}">Investor</a>
+                            <a class="hs-mega-menu-invoker nav-link" href="{{ route('blog_home') }}">Blog</a>
                         </li>
                         <li class="nav-item">
                             <a class="hs-mega-menu-invoker nav-link" href="{{ route('career_home') }}">Career</a>
@@ -36,16 +36,22 @@
                         <li class="nav-item">
                             <a class="hs-mega-menu-invoker nav-link" href="{{ route('events_home') }}">Events</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="hs-mega-menu-invoker nav-link" href="#">Testimoni</a>
+                        </li>
                         <li class="hs-has-sub-menu nav-item">
                             <a id="accountMegaMenu" class="hs-mega-menu-invoker nav-link dropdown-toggle " href="#"
                                 role="button" aria-expanded="false">Produk</a>
                             <div class="hs-sub-menu dropdown-menu" aria-labelledby="accountMegaMenu"
                                 style="min-width: 14rem;">
-                                <a class="dropdown-item " href="{{ route('potofolio_home') }}">Portfolio</a>
                                 <a class="dropdown-item " href="{{ route('software_home') }}">sofware</a>
                                 <a class="dropdown-item " href="{{ route('hardware_home') }}">Hardware</a>
                                 <a class="dropdown-item " href="{{ route('networking_home') }}">Networking</a>
+                                <a class="dropdown-item " href="{{ route('potofolio_home') }}">Lainnya</a>
                             </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="hs-mega-menu-invoker nav-link" href="{{ route('investor_home') }}">Investor</a>
                         </li>
                         <li class="hs-has-sub-menu nav-item">
                             <a id="pagesMegaMenu" class="hs-mega-menu-invoker nav-link dropdown-toggle " href="#"
@@ -53,7 +59,7 @@
                             <div class="hs-sub-menu dropdown-menu" aria-labelledby="pagesMegaMenu"
                                 style="min-width: 14rem;">
                                 <a class="dropdown-item " href="{{ route('photos_home') }}">Photos</a>
-                                {{-- <a class="dropdown-item " href="{{ route('video_home') }}">Video</a> --}}
+                                <a class="dropdown-item " href="{{ route('video_home') }}">Video</a>
                             </div>
                         </li>
                     </ul>
