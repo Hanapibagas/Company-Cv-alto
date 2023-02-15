@@ -22,7 +22,7 @@
             <span>Blog</span></a>
     </li>
 
-    <hr class="sidebar-divider d-none d-md-block">
+    <hr class="sidebar-divider my-0">
 
     <li class="nav-item">
         <a class="nav-link" href="{{ route('index_career') }}">
@@ -30,7 +30,7 @@
             <span>Career</span></a>
     </li>
 
-    <hr class="sidebar-divider d-none d-md-block">
+    <hr class="sidebar-divider my-0">
 
     <li class="nav-item">
         <a class="nav-link" href="{{ route('index_events') }}">
@@ -38,7 +38,7 @@
             <span>Events</span></a>
     </li>
 
-    <hr class="sidebar-divider d-none d-md-block">
+    <hr class="sidebar-divider my-0">
 
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
@@ -56,7 +56,7 @@
         </div>
     </li>
 
-    <hr class="sidebar-divider d-none d-md-block">
+    <hr class="sidebar-divider my-0">
 
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse" aria-expanded="true"
@@ -67,7 +67,7 @@
         <div id="collapse" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="{{ route('index_photos') }}">Produk photos</a>
-                {{-- <a class="collapse-item" href="{{ route('index_software') }}">Produk software</a> --}}
+                <a class="collapse-item" href="{{ route('index_video') }}">Produk video</a>
             </div>
         </div>
     </li>

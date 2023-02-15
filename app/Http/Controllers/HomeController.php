@@ -10,6 +10,7 @@ use App\Models\Networking;
 use App\Models\Photos;
 use App\Models\Portofolio;
 use App\Models\Software;
+use App\Models\Video;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -97,7 +98,8 @@ class HomeController extends Controller
 
     public function video()
     {
-        return view('landing.pages.gallerry-video');
+        $videos = Video::all();
+        return view('landing.pages.gallerry-video', compact('videos'));
     }
 
     public function blog()
@@ -110,5 +112,10 @@ class HomeController extends Controller
     {
         $blogs = Blog::where('slug', $slug)->firstOrFail();
         return view('landing.pages.details-blog', compact('blogs'));
+    }
+
+    public function testimoni()
+    {
+        return view('landing.pages.testimoni');
     }
 }
