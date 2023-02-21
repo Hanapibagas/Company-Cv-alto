@@ -1,5 +1,6 @@
-<a class="js-go-to go-to position-fixed" href="javascript:;" style="visibility: hidden;" data-hs-go-to-options='{
-    "offsetTop": 700,
+{{-- <a class="js-go-to go-to position-fixed" style="width: 6%; height: 10%; color: green"
+    href="https://wa.me/6282192272289" data-hs-go-to-options='{
+    "offsetTop": 300,
     "position": {
       "init": {
         "right": "2rem"
@@ -12,8 +13,8 @@
       }
     }
   }'>
-    <i class="bi-chevron-up"></i>
-</a>
+    <i style="color: green" class="bi-whatsapp"></i>
+</a> --}}
 
 <script src="{{ asset('pages/frontend/js/vendor.min.js') }}"></script>
 <script src="{{ asset('pages/frontend/vendor/aos/dist/aos.js') }}"></script>

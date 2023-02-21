@@ -38,7 +38,7 @@ Gallery Photos
             </a>
         </div>
         @empty
-        <div style="text-align: center; margin-left: 34%">
+        <div style="text-align: center">
             <h1>
                 Mohon maaf gallery photo saat ini tidak ada.
             </h1>
