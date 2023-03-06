@@ -3,12 +3,15 @@
 
 <head>
     <meta charset="utf-8">
+    @stack('link')
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>CV. Alto Perkasa | @yield('title')</title>
     <link rel="shortcut icon" href="favicon.ico">
 
     @include('includes.pages.style')
+
+    @stack('add-style')
 
 </head>
 
@@ -277,6 +280,9 @@
     </section>
 
     @include('includes.pages.script')
+
+    @stack('add-script')
+
 </body>
 
 </html>

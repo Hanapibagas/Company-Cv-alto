@@ -26,7 +26,7 @@ Blog
             </a>
         </div>
         @empty
-        <div style="text-align: center; margin-left: 33%">
+        <div style="text-align: center">
             <h1>
                 Mohon maaf blog saat ini tidak ada.
             </h1>

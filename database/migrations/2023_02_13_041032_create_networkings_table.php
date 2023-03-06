@@ -17,7 +17,7 @@ class CreateNetworkingsTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('slug');
-            $table->bigInteger('price');
+            $table->string('price');
             $table->longText('deskripsi');
             $table->string('image');
             $table->timestamps();

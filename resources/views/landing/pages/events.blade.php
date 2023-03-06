@@ -18,7 +18,7 @@ Events
         <div class="col-lg-8 mb-10 mb-lg-0">
             <div class="d-grid gap-7 mb-7">
                 @forelse ( $events as $event )
-                <div class="card card-flush card-stretched">
+                <div class="card card-flush card-stretched" style="margin-top: 40px">
                     <div class="row">
                         <div class="col-sm-5">
                             <img class="card-img" src="{{ asset('storage/'.$event->image) }}" alt="Image Description">

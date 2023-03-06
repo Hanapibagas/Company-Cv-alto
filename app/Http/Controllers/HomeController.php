@@ -10,6 +10,7 @@ use App\Models\Networking;
 use App\Models\Photos;
 use App\Models\Portofolio;
 use App\Models\Software;
+use App\Models\Testimoni;
 use App\Models\Video;
 use Illuminate\Http\Request;
 
@@ -116,6 +117,7 @@ class HomeController extends Controller
 
     public function testimoni()
     {
-        return view('landing.pages.testimoni');
+        $testi = Testimoni::all();
+        return view('landing.pages.testimoni', compact('testi'));
     }
 }

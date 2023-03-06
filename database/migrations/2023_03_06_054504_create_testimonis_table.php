@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSoftwareTable extends Migration
+class CreateTestimonisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateSoftwareTable extends Migration
      */
     public function up()
     {
-        Schema::create('software', function (Blueprint $table) {
+        Schema::create('testimonis', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('slug');
-            $table->string('price');
-            $table->longText('deskripsi');
-            $table->string('image');
+            $table->string('video');
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ class CreateSoftwareTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('software');
+        Schema::dropIfExists('testimonis');
     }
 }

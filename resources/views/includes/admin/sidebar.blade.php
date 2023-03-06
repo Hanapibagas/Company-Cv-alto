@@ -41,6 +41,13 @@
     <hr class="sidebar-divider my-0">
 
     <li class="nav-item">
+        <a class="nav-link" href="{{ route('index_testimoni') }}">
+            <i class="fas fa-fw fa-eye"></i>
+            <span>Tesimoni</span></a>
+    </li>
+    <hr class="sidebar-divider my-0">
+
+    <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
             aria-controls="collapseTwo">
             <i class="fas fa-fw fa-folder-open"></i>

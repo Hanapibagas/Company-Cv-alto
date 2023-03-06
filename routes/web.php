@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\EventsController;
 use App\Http\Controllers\Admin\ProdukAdminController;
 use App\Http\Controllers\Admin\GalleryAdminController;
+use App\Http\Controllers\Admin\TestimoniController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -39,6 +40,11 @@ Auth::routes();
 
 Route::prefix('dashboard')->middleware(['auth', 'admin'])->group(function () {
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard_index');
+
+    // testi
+    Route::get('/testimoni', [TestimoniController::class, 'index'])->name('index_testimoni');
+    Route::get('/testimoni/create', [TestimoniController::class, 'create'])->name('create_testimoni');
+    Route::post('/testimobi/post/', [TestimoniController::class, 'store'])->name('store_testimoni');
 
     // blog
     Route::get('/blog/index/', [BlogAdminController::class, 'index'])->name('index_blog');

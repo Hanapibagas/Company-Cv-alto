@@ -4,6 +4,19 @@
 Details Blog
 @endsection
 
+@push('link')
+<meta property="og:image" itemprop="image" content="{{ asset('storage/'.$blogs->image) }}">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
+<meta property="og:title" content="{{ $blogs->title }}" />
+@endpush
+
+@push('add-style')
+<script type='text/javascript'
+    src='https://platform-api.sharethis.com/js/sharethis.js#property=61fdcb3c97a9c5001998eb2d&product=inline-share-buttons'
+    async='async'></script>
+@endpush
+
 @section('content')
 <div class="container content-space-t-3 content-space-t-lg-4 content-space-b-2">
     <div class="w-lg-65 mx-lg-auto">
@@ -22,7 +35,7 @@ Details Blog
             {!! $blogs->deskripsi !!}
         </p>
 
-        <div class="row justify-content-sm-between align-items-sm-center mt-5">
+        {{-- <div class="row justify-content-sm-between align-items-sm-center mt-5">
             <div class="col-sm mb-2 mb-sm-0">
                 <div class="d-flex align-items-center">
                     <span class="text-cap mb-0 me-2">Share:</span>
@@ -35,8 +48,8 @@ Details Blog
                     <a class="btn btn-ghost-secondary btn-sm btn-icon rounded-circle me-2" href="#">
                         <i class="bi-instagram"></i>
                     </a>
-                    <a class="btn btn-ghost-secondary btn-sm btn-icon rounded-circle me-2" href="#">
-                        <i class="bi-telegram"></i>
+                    <a class="btn btn-ghost-secondary btn-sm btn-icon rounded-circle me-2" href="#.">
+                        <i class="bi-whatsapp"></i>
                     </a>
                 </div>
             </div>
@@ -50,7 +63,8 @@ Details Blog
                     <i class="bi-flag"></i>
                 </a>
             </div>
-        </div>
+        </div> --}}
+        <div class="sharethis-inline-share-buttons"></div>
     </div>
 </div>
 
