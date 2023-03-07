@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use App\Models\Career;
 use App\Models\Event;
+use App\Models\FormCareer;
 use App\Models\Hardware;
 use App\Models\Networking;
 use App\Models\Photos;
@@ -35,6 +36,45 @@ class HomeController extends Controller
     {
         $banner = Career::all();
         return view('landing.pages.career', compact('banner'));
+    }
+
+    public function form()
+    {
+        return view('landing.pages.form-career');
+    }
+
+    public function store_form(Request $request)
+    {
+        if ($request->file('pas_foto')) {
+            $pas_foto = $request->file('pas_foto')->store('form-career', 'public');
+        }
+        if ($request->file('ijaza')) {
+            $ijaza = $request->file('ijaza')->store('form-career', 'public');
+        }
+        if ($request->file('ktp')) {
+            $ktp = $request->file('ktp')->store('form-career', 'public');
+        }
+        if ($request->file('cv')) {
+            $cv = $request->file('cv')->store('form-career', 'public');
+        }
+
+        FormCareer::create([
+            'posisi' => $request->input('posisi'),
+            'nama_lengkap' => $request->input('nama_lengkap'),
+            'alamat' => $request->input('alamat'),
+            'alamat_ktp' => $request->input('alamat_ktp'),
+            'pendidikan' => $request->input('pendidikan'),
+            'facebook' => $request->input('facebook'),
+            'instagram' => $request->input('instagram'),
+            'whatsapp' => $request->input('whatsapp'),
+            'pas_foto' => $pas_foto,
+            'ijaza' => $ijaza,
+            'ktp' => $ktp,
+            'cv' => $cv
+        ]);
+
+        // return response()->json($test);
+        return redirect()->route('form_home')->with('status', 'Selamat data formulir anda berhasil di kirim');
     }
 
     public function events()

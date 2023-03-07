@@ -4,6 +4,8 @@
     </a>
     <p class="fs-6 mb-1">CV. Alto Perkasa</p>
     <p class="fs-6">&copy; 2023 </p>
+    <p class="fs-6">Jl. Boulevard, Kios GF 9, Apartment Vida View, Panakkukang, Kota Makassar | <a
+            href="https://wa.me/6282192272289">+6282192272289</a></p>
     {{-- <ul class="list-inline mb-0">
         <li class="list-inline-item">
             <a class="btn btn-ghost-secondary btn-sm btn-icon rounded-circle" href="#">

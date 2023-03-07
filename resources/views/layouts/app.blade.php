@@ -40,27 +40,7 @@
                                 data-id="a82a896" data-element_type="widget" data-widget_type="shortcode.default">
                                 <div class="elementor-widget-container">
                                     <div class="elementor-shortcode">
-                                        <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-                                            rel="stylesheet" type="text/css">
-                                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-                                        </script>
                                         <style>
-                                            /* CSS Multiple Whatsapp Chat */
-                                            #whatsapp-chat {
-                                                position: fixed;
-                                                background: #fff;
-                                                width: 350px;
-                                                border-radius: 10px;
-                                                box-shadow: 0 1px 15px rgba(32, 33, 36, .28);
-                                                bottom: 90px;
-                                                right: 30px;
-                                                overflow: hidden;
-                                                z-index: 0;
-                                                animation-name: showchat;
-                                                animation-duration: 1s;
-                                                transform: scale(1)
-                                            }
-
                                             a.blantershow-chat {
                                                 background: linear-gradient(to right top, #6f96f3, #164ed2);
                                                 color: #fff;
@@ -124,10 +104,6 @@
                                                 overflow: hidden;
                                                 animation-name: showhide;
                                                 animation-duration: 2.5s
-                                            }
-
-                                            a.informasi:hover {
-                                                background: #f1f1f1
                                             }
 
                                             .info-chat span {
@@ -216,12 +192,12 @@
                                                 font-size: 30px
                                             }
 
-                                            @keyframes showhide {
+                                            /* @keyframes showhide {
                                                 from {
                                                     transform: scale(.5);
                                                     opacity: 0
                                                 }
-                                            }
+                                            } */
 
                                             @keyframes showchat {
                                                 from {
@@ -239,13 +215,13 @@
                                                 }
                                             }
 
-                                            .hide {
+                                            /* .hide {
                                                 display: none;
                                                 animation-name: showhide;
                                                 animation-duration: 1.5s;
                                                 transform: scale(1);
                                                 opacity: 1
-                                            }
+                                            } */
 
                                             .show {
                                                 display: block;
@@ -263,12 +239,6 @@
                                         <a class="blantershow-chat" target="_blank" href="https://wa.me/6282192272289"
                                             title="Show Chat" data-wpel-link="internal"><i
                                                 class="fab fa-whatsapp"></i>Butuh bantuan?</a>
-                                        <script type="text/javascript">
-                                            //<![CDATA[
-        /* Whatsapp Chat Widget by www.idblanter.com */
-        $(document).on("click","#send-it",function(){var a=document.getElementById("chat-input");if(""!=a.value){var b=$("#get-number").text(),c=document.getElementById("chat-input").value,d="https://web.whatsapp.com/send",e=b,f="&text="+c;if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))var d="whatsapp://send";var g=d+"?phone="+e+f;window.open(g, '_blank')}}),$(document).on("click",".informasi",function(){document.getElementById("get-number").innerHTML=$(this).children(".my-number").text(),$(".start-chat,.get-new").addClass("show").removeClass("hide"),$(".home-chat,.head-home").addClass("hide").removeClass("show"),document.getElementById("get-nama").innerHTML=$(this).children(".info-chat").children(".chat-nama").text(),document.getElementById("get-label").innerHTML=$(this).children(".info-chat").children(".chat-label").text()}),$(document).on("click",".close-chat",function(){$("#whatsapp-chat").addClass("hide").removeClass("show")}),$(document).on("click",".blantershow-chat",function(){$("#whatsapp-chat").addClass("show").removeClass("hide")});
-        //]]&gt;
-                                        </script>
                                     </div>
                                 </div>
                             </div>

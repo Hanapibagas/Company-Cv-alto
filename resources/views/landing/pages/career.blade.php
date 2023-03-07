@@ -35,7 +35,7 @@ Career
         <div class="card card-info-link card-sm">
             <div class="card-body">
                 Bagi Pelamar yang berminat pada beberapa lowongan kerja kami silahkan isi form berikut
-                <a class="card-link ms-2" href="#">
+                <a class="card-link ms-2" href="{{ route('form_home') }}">
                     Form Isian
                     <span class="bi-chevron-right small ms-1"></span>
                 </a>
